@@ -1,0 +1,54 @@
+package com.generation;
+
+import java.util.Scanner; // importe la clase scanner 
+
+public class Codigo4 {
+	
+	public static void main(String[] args) { // agrego calse main 
+		
+		 Scanner s = new Scanner(System.in); // le faltaba el system in
+		  
+		    
+		    System.out.print("Turno del jugador 1 (introduzca piedra, papel o tijeras): ");
+		    Scanner s1 = new Scanner(System.in); // instancié mi clase
+		    String j1 = s1.nextLine();
+		    
+		    System.out.println("Turno del jugador 2 (introduzca piedra, papel o tijeras): ");// cambié el número de juegar
+		    Scanner s2 = new Scanner(System.in); // le faltaba el system in
+		    String j2 = s2.nextLine();
+		    
+		  
+		    
+		    if (j1.equals(j2)){
+		      System.out.println("Empate");
+		    } else {
+		      int g = 2;
+		      switch(j1) {
+		        case "piedra":
+		          if (j2.equals("tijeras")) {
+		            g = 1;
+		          }
+		          break; // agrego breaks
+
+		        case "papel":
+		          if (j2.equals("piedra")) { //faltaban las llaves
+		            g = 1;
+		          }
+		          break;
+		          
+		        case "tijeras": // cambio tijeras 
+		          if (j2.equals("papel")) {
+		            g = 1;
+		          }
+		          break;
+		        
+		        default:
+		      }
+		      System.out.println("Gana el jugador " + g);
+		 }
+		  
+	}
+}
+
+  
+  
